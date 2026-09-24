@@ -1,1 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #eef1f5;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+.cv {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+/* HEADER */
+
+.header {
+    background: #111827;
+    color: white;
+    padding: 45px 55px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.profile-image {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+}
+
+.profession {
+    color: #60a5fa;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.description {
+    max-width: 600px;
+    color: #d1d5db;
+}
+
+.contact {
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    color: #d1d5db;
+    font-size: 14px;
+}
+
+/* CONTENT */
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.main-column {
+    padding: 45px 50px;
+}
+
+.sidebar {
+    padding: 45px 35px;
+    background: #f8fafc;
+    border-left: 1px solid #e5e7eb;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 20px;
+    color: #111827;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 45px;
+    height: 3px;
+    background: #2563eb;
+    border-radius: 10px;
+}
+
+.main-column p {
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.item {
+    margin-bottom: 28px;
+}
+
+.item:last-child {
+    margin-bottom: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+h3 {
+    color: #1f2937;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+.item-header span {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.institution {
+    color: #2563eb !important;
+    font-weight: 600;
+    margin-bottom: 8px !important;
+}
+
+/* TAGS */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tags span {
+    background: #e8f0ff;
+    color: #1d4ed8;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* SKILLS */
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.skill strong {
+    color: #2563eb;
+}
+
+.progress {
+    height: 7px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #2563eb;
+    border-radius: 20px;
+}
+
+/* COMPETENCIES */
+
+.competencies {
+    list-style: none;
+}
+
+.competencies li {
+    margin-bottom: 10px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+.competencies li::before {
+    content: "✓";
+    color: #2563eb;
+    font-weight: 800;
+    margin-right: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    .cv {
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 35px 25px;
+    }
+
+    .profile {
+        align-items: flex-start;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .contact {
+        min-width: auto;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .main-column {
+        padding: 35px 25px;
+    }
+
+    .sidebar {
+        padding: 35px 25px;
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+    }
+
+    .item-header {
+        flex-direction: column;
+        gap: 2px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile-image {
+        width: 85px;
+        height: 85px;
+        font-size: 25px;
+    }
+
+    .header h1 {
+        font-size: 27px;
+    }
+}
